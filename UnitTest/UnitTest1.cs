@@ -199,5 +199,26 @@ namespace UnitTest
             string[] actual = Calculations.AvailablePeriods(startTimes, durations, beginWorkingTime, endWorkingTime, consultationTime);
             Assert.AreEqual(mistake[0], actual[0]);
         }
+
+        [TestMethod]
+        //проверка на вывод ошибки если конец рабочего дня раньше чем начало
+        public void ErrorsIfTheEndOfTheWorkingDayIsEarlierThanTheBeginning()
+        {
+            TimeSpan beginWorkingTime = new TimeSpan(8, 0, 0);
+            TimeSpan endWorkingTime = new TimeSpan(7, 0, 0);
+
+            TimeSpan timeSpan = new TimeSpan(8, 0, 0);
+            TimeSpan timeSpan1 = new TimeSpan(9, 0, 0);
+            TimeSpan timeSpan2 = new TimeSpan(15, 20, 0);
+            TimeSpan timeSpan3 = new TimeSpan(15, 30, 0);
+            TimeSpan timeSpan4 = new TimeSpan(16, 50, 0);
+            int[] durations = { 60, 30, 20, 10, 40 };
+            int consultationTime = 30;
+            TimeSpan[] startTimes = { timeSpan, timeSpan1, timeSpan2, timeSpan3, timeSpan4 };
+
+            string[] mistake = { "ошибка" };
+            string[] actual = Calculations.AvailablePeriods(startTimes, durations, beginWorkingTime, endWorkingTime, consultationTime);
+            Assert.AreEqual(mistake[0], actual[0]);
+        }
     }
 }

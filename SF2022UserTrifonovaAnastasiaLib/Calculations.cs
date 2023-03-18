@@ -16,6 +16,11 @@ namespace SF2022UserTrifonovaAnastasiaLib
             string[] mistake = new string[1];
             int count = 0;
             int countStartTime = durations.Length;
+            if(beginWorkingTime>endWorkingTime)
+            {
+                mistake[0] = "ошибка";
+                return mistake;
+            }
             while (time != endWorkingTime)
             {
                 time = time + consultation;
