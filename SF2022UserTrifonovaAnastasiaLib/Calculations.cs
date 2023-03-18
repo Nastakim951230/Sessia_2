@@ -96,7 +96,7 @@ namespace SF2022UserTrifonovaAnastasiaLib
 
                             else
                             {
-                                periods[k] = string.Format("{0:hh\\:mm}-{1:hh\\:mm} ", beginWorkingTime, beginWorkingTime + consultation);
+                                periods[k] = string.Format("{0:hh\\:mm}-{1:hh\\:mm}", beginWorkingTime, beginWorkingTime + consultation);
 
                                 beginWorkingTime = beginWorkingTime + consultation;
                                 k++;
@@ -106,7 +106,7 @@ namespace SF2022UserTrifonovaAnastasiaLib
                         else
                         {
 
-                            periods[k] = string.Format("{0:hh\\:mm}-{1:hh\\:mm} ", beginWorkingTime, beginWorkingTime + consultation);
+                            periods[k] = string.Format("{0:hh\\:mm}-{1:hh\\:mm}", beginWorkingTime, beginWorkingTime + consultation);
                             beginWorkingTime = beginWorkingTime + consultation;
                             k++;
                         }
