@@ -21,7 +21,7 @@ namespace SF2022UserTrifonovaAnastasiaLib
                 time = time + consultation;
                 count++;
             }
-            if (beginWorkingTime < startTimes[0])
+            if (beginWorkingTime > startTimes[0])
             {
                 mistake[0] = "ошибка";
                 return mistake;
