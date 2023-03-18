@@ -163,7 +163,7 @@ namespace UnitTest
         public void SameTimeRecordingError()
         {
             TimeSpan beginWorkingTime = new TimeSpan(8, 0, 0);
-            TimeSpan endWorkingTime = new TimeSpan(8, 0, 0);
+            TimeSpan endWorkingTime = new TimeSpan(18, 0, 0);
 
             TimeSpan timeSpan = new TimeSpan(8, 0, 0);
             TimeSpan timeSpan1 = new TimeSpan(9, 0, 0);
@@ -184,14 +184,14 @@ namespace UnitTest
         public void ErrorsAtCloseTimeRecords()
         {
             TimeSpan beginWorkingTime = new TimeSpan(8, 0, 0);
-            TimeSpan endWorkingTime = new TimeSpan(8, 0, 0);
+            TimeSpan endWorkingTime = new TimeSpan(18, 0, 0);
 
             TimeSpan timeSpan = new TimeSpan(8, 0, 0);
             TimeSpan timeSpan1 = new TimeSpan(9, 0, 0);
             TimeSpan timeSpan2 = new TimeSpan(15, 20, 0);
             TimeSpan timeSpan3 = new TimeSpan(15, 30, 0);
             TimeSpan timeSpan4 = new TimeSpan(16, 50, 0);
-            int[] durations = { 60, 30, 10, 10, 40 };
+            int[] durations = { 60, 30, 20, 10, 40 };
             int consultationTime = 30;
             TimeSpan[] startTimes = { timeSpan, timeSpan1, timeSpan2, timeSpan3, timeSpan4 };
 
